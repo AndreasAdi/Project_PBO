@@ -11,7 +11,6 @@ package project_pbo;
  */
 public class Player extends Pacman{
     int score;
-    int powerup;
     String efek;
     public int getScore() {
         return score;
@@ -19,10 +18,6 @@ public class Player extends Pacman{
 
     public void setScore(int score) {
         this.score = score;
-    }
-
-    public int getPowerup() {
-        return powerup;
     }
 
     public String getEfek() {
@@ -33,9 +28,6 @@ public class Player extends Pacman{
         this.efek = efek;
     }
 
-    public void setPowerup(int powerup) {
-        this.powerup = powerup;
-    }
     public Player(int x, int y, String image) {
         super(x, y, image);
         this.score=0;
