@@ -6,7 +6,13 @@
 package project_pbo;
 
 import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 
 /**
  *
@@ -20,7 +26,12 @@ public class MainPanel extends javax.swing.JPanel {
     ArrayList<Pacman> pacman = new ArrayList<>();
     public MainPanel() {
         initComponents();
-       // pacman.add(new Player(50, 50, ));
+        try {
+            Image img = ImageIO.read(new File("src\\Sprite_Pacman\\pacman.png"));
+             pacman.add(new Player(50, 50, img));
+        } catch (IOException ex) {
+            Logger.getLogger(MainPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
