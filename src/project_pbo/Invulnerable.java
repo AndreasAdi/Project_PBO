@@ -23,7 +23,7 @@ public class Invulnerable extends PowerUp{
     public void setTipe(String tipe) {
         this.tipe = tipe;
     }
-    public void slow(Player p,Ghost g){
+    public void invincible(Player p,Ghost g){
         if(p.getEfek().equals("i")){
             g.setEfek("v");//Memberikan status vulnerable kepada ghost sehingga bisa di makan
         }
