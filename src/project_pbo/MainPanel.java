@@ -20,7 +20,7 @@ public class MainPanel extends javax.swing.JPanel {
     ArrayList<Pacman> pacman = new ArrayList<>();
     public MainPanel() {
         initComponents();
-        pacman.add(new Player(50, 50, ""));
+       // pacman.add(new Player(50, 50, ));
     }
 
     @Override

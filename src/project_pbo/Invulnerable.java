@@ -5,17 +5,21 @@
  */
 package project_pbo;
 
+import java.awt.Image;
+
 /**
  *
  * @author Andreas
  */
 public class Invulnerable extends PowerUp{
     String tipe;
-    public Invulnerable(int x, int y, String image) {
-        super(x, y, image);
-        this.tipe="i";
-    }
 
+
+    public Invulnerable(int x, int y, Image img) {
+        super(x, y, img);
+         this.tipe="i";
+
+    }
     public String getTipe() {
         return tipe;
     }

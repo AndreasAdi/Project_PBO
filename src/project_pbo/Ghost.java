@@ -5,6 +5,8 @@
  */
 package project_pbo;
 
+import java.awt.Image;
+
 /**
  *
  * @author Andreas
@@ -12,12 +14,14 @@ package project_pbo;
 public class Ghost extends Pacman{
     String efek;
     int move;
-    public Ghost(int x, int y, String image) {
-        super(x, y, image);
+
+
+    public Ghost(int x, int y, Image img) {
+        super(x, y, img);
         this.efek="";
         this.move=1000;
-    }
 
+    }
     public int getMove() {
         return move;
     }

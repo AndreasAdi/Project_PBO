@@ -5,17 +5,21 @@
  */
 package project_pbo;
 
+import java.awt.Image;
+
 /**
  *
  * @author Andreas
  */
 public class Slowing extends PowerUp{
     String tipe;
-    public Slowing(int x, int y, String image,String tipe) {
-        super(x, y, image);
+
+
+
+    public Slowing(int x, int y, Image img) {
+        super(x, y, img);
         this.tipe="s";
     }
-
     public String getTipe() {
         return tipe;
     }

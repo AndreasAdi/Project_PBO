@@ -5,6 +5,10 @@
  */
 package project_pbo;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+
 /**
  *
  * @author Andreas
@@ -12,6 +16,13 @@ package project_pbo;
 public class Player extends Pacman{
     int score;
     String efek;
+
+    public Player(int x, int y, Image img) {
+        super(x, y, img);        
+        
+        this.score=0;
+        this.efek="";
+    }
     public int getScore() {
         return score;
     }
@@ -28,10 +39,11 @@ public class Player extends Pacman{
         this.efek = efek;
     }
 
-    public Player(int x, int y, String image) {
-        super(x, y, image);
-        this.score=0;
-        this.efek="";
+
+    @Override
+    public void draw(Graphics g){
+        g.setColor(Color.yellow);
+        g.fillRect(x, y, 50, 50);
     }
     
 }

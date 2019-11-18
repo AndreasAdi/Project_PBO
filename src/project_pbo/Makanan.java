@@ -5,15 +5,20 @@
  */
 package project_pbo;
 
+import java.awt.Image;
+
 /**
  *
  * @author Andreas
  */
 public class Makanan extends Pacman{
     int poin;
-    public Makanan(int x, int y, String image) {
-        super(x, y, image);
-        this.poin=10;
+
+    
+
+    public Makanan(int x, int y, Image img) {
+        super(x, y, img);
+          this.poin=10;
     }
 
     public int getPoin() {
