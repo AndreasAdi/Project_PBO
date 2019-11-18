@@ -5,6 +5,7 @@
  */
 package project_pbo;
 
+import com.sun.glass.events.KeyEvent;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -26,6 +27,7 @@ public class MainPanel extends javax.swing.JPanel {
     ArrayList<Pacman> pacman = new ArrayList<>();
     public MainPanel() {
         initComponents();
+       this.setFocusable(true);
         try {
             Image img = ImageIO.read(new File("src\\Sprite_Pacman\\pacman.png"));
              pacman.add(new Player(50, 50, img));
@@ -41,6 +43,7 @@ public class MainPanel extends javax.swing.JPanel {
         for (Pacman p : pacman) {
            p.draw(g);
         }
+        repaint();
     }
     
     
@@ -54,6 +57,13 @@ public class MainPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setBackground(new java.awt.Color(0, 0, 0));
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,6 +75,28 @@ public class MainPanel extends javax.swing.JPanel {
             .addGap(0, 500, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+          if (evt.getKeyCode()== KeyEvent.VK_A) {
+              System.out.println("asd");
+              for (Pacman p : pacman) {
+                  if (p instanceof Player) {
+                      p.setX(p.getX()-32);
+                  }
+
+              }
+          }
+          if (evt.getKeyCode()== KeyEvent.VK_A) {
+              for (Pacman p : pacman) {
+                  if (p instanceof Player) {
+                      p.setX(p.getX()+32);
+                  }
+
+              }
+          }
+          repaint();
+    }//GEN-LAST:event_formKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
