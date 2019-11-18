@@ -42,8 +42,7 @@ public class Player extends Pacman{
 
     @Override
     public void draw(Graphics g){
-        g.setColor(Color.yellow);
-        g.fillRect(x, y, 50, 50);
+       g.drawImage(img,20,20,32,32,null);
     }
     
 }
