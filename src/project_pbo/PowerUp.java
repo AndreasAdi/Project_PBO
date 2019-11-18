@@ -9,6 +9,19 @@ package project_pbo;
  *
  * @author Andreas
  */
-public class PowerUp {
+public class PowerUp extends Pacman{
+    int durasi;
+    public PowerUp(int x, int y, String image) {
+        super(x, y, image);
+        this.durasi=10;
+    }
+
+    public int getDurasi() {
+        return durasi;
+    }
+
+    public void setDurasi(int durasi) {
+        this.durasi = durasi;
+    }
     
 }

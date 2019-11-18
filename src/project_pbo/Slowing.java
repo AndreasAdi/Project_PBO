@@ -9,6 +9,23 @@ package project_pbo;
  *
  * @author Andreas
  */
-public class Slowing {
-    
+public class Slowing extends PowerUp{
+    String tipe;
+    public Slowing(int x, int y, String image,String tipe) {
+        super(x, y, image);
+        this.tipe="s";
+    }
+
+    public String getTipe() {
+        return tipe;
+    }
+
+    public void setTipe(String tipe) {
+        this.tipe = tipe;
+    }
+    public void slow(Player p,Ghost g){
+        if(p.getEfek().equals("s")){
+            g.setMove(2000);//Memperlambat Pergerakan Ghost menjadi 1 petak setiap 2 detik
+        }
+    }
 }

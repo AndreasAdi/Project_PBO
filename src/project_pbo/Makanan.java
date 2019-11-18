@@ -9,6 +9,19 @@ package project_pbo;
  *
  * @author Andreas
  */
-public class Makanan {
+public class Makanan extends Pacman{
+    int poin;
+    public Makanan(int x, int y, String image) {
+        super(x, y, image);
+        this.poin=10;
+    }
+
+    public int getPoin() {
+        return poin;
+    }
+
+    public void setPoin(int poin) {
+        this.poin = poin;
+    }
     
 }

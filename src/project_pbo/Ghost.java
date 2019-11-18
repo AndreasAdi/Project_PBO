@@ -9,6 +9,29 @@ package project_pbo;
  *
  * @author Andreas
  */
-public class Ghost {
+public class Ghost extends Pacman{
+    String efek;
+    int move;
+    public Ghost(int x, int y, String image) {
+        super(x, y, image);
+        this.efek="";
+        this.move=1000;
+    }
+
+    public int getMove() {
+        return move;
+    }
+
+    public void setMove(int move) {
+        this.move = move;
+    }
+
+    public String getEfek() {
+        return efek;
+    }
+
+    public void setEfek(String efek) {
+        this.efek = efek;
+    }
     
 }

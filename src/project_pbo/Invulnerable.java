@@ -9,6 +9,23 @@ package project_pbo;
  *
  * @author Andreas
  */
-public class Invulnerable {
-    
+public class Invulnerable extends PowerUp{
+    String tipe;
+    public Invulnerable(int x, int y, String image) {
+        super(x, y, image);
+        this.tipe="i";
+    }
+
+    public String getTipe() {
+        return tipe;
+    }
+
+    public void setTipe(String tipe) {
+        this.tipe = tipe;
+    }
+    public void slow(Player p,Ghost g){
+        if(p.getEfek().equals("i")){
+            g.setEfek("v");//Memberikan status vulnerable kepada ghost sehingga bisa di makan
+        }
+    }
 }
