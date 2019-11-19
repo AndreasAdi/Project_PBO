@@ -97,6 +97,20 @@ public class MainPanel extends javax.swing.JPanel {
                   }
               }
           }
+          if (evt.getKeyCode()== KeyEvent.VK_W) {
+              for (Pacman p : pacman) {
+                  if (p instanceof Player) {
+                      p.setY(p.getY()-32);
+                  }
+              }
+          }
+          if (evt.getKeyCode()== KeyEvent.VK_S) {
+              for (Pacman p : pacman) {
+                  if (p instanceof Player) {
+                      p.setY(p.getY()+32);
+                  }
+              }
+          }           
           repaint();
     }//GEN-LAST:event_formKeyPressed
 
