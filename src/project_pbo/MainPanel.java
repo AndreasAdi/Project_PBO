@@ -41,9 +41,12 @@ public class MainPanel extends javax.swing.JPanel {
         super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
         
         for (Pacman p : pacman) {
-           p.draw(g);
+           if(p instanceof Player){
+                p.draw(g);
+                //g.drawImage(p.getImg(),p.getX(),p.getY(),32,32,null);
+            }
         }
-        repaint();
+        //repaint();
     }
     
     
@@ -84,15 +87,14 @@ public class MainPanel extends javax.swing.JPanel {
                   if (p instanceof Player) {
                       p.setX(p.getX()-32);
                   }
-
               }
+              repaint();
           }
-          if (evt.getKeyCode()== KeyEvent.VK_A) {
+          if (evt.getKeyCode()== KeyEvent.VK_D) {
               for (Pacman p : pacman) {
                   if (p instanceof Player) {
                       p.setX(p.getX()+32);
                   }
-
               }
           }
           repaint();

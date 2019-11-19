@@ -39,10 +39,8 @@ public class Player extends Pacman{
         this.efek = efek;
     }
 
-
     @Override
     public void draw(Graphics g){
-       g.drawImage(img,20,20,32,32,null);
+       g.drawImage(img,x,y,32,32,null);
     }
-    
 }

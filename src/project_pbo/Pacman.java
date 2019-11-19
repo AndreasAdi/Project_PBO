@@ -56,6 +56,5 @@ public class Pacman {
 //        this.image = image;
 //    }
     public  void draw(Graphics g){
-    
     };
 }
